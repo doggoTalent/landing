@@ -29,7 +29,3 @@ Explore the live version of the portfolio:
 - **Email**: [martinuc.ilia@gmail.com](mailto:martinuc.ilia@gmail.com)
 - **GitHub**: [github.com/doggoTalent](https://github.com/doggoTalent)
 - **Telegram**: [@DoggoTalent](https://t.me/doggoTalent)
-
----
-
-## 📂 Project Structure
