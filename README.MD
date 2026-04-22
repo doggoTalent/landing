@@ -2,7 +2,7 @@
 
 A self-hosted DevOps, Linux System Administrator, and Network Engineer portfolio built with Astro and deployed on a Hetzner VPS.
 
-![Infrastructure Overview](scheme.png)
+![Infrastructure Overview](doggotalent-portfolio-files/scheme.png)
 
 ---
 
