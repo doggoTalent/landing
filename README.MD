@@ -1,31 +1,21 @@
 # DoggoTalent Portfolio
 
-A self-hosted DevOps, Linux System Administrator, and Network Engineer portfolio built with Astro and deployed on a Hetzner VPS.
+Self‑hosted DevOps & Linux portfolio – live at [doggotalent.xyz](https://doggotalent.xyz)
 
-![Infrastructure Overview](doggotalent-portfolio-files/scheme.png)
+Built with **Astro** (static site) and deployed on a Hetzner VPS with Docker, Nginx, Prometheus & Grafana.
 
----
+## What's inside
 
-## 📄 Description
+- `/` – Landing page with skills, projects, and contact info
+- `/grafana` – Live monitoring dashboards (read‑only, no login required)
 
-This landing page showcases my skills and experience in DevOps, system administration, and network engineering. The site is fully self-hosted and includes:
+## Tech stack
 
-- **Infrastructure**: Ubuntu 24.04.4 LTS with Docker, Nginx, Prometheus, and Grafana.
-- **Monitoring**: Real-time system and application monitoring.
-- **Projects**: Examples of implemented solutions.
-- **Skills**: List of technologies and tools used.
+- **Frontend**: Astro, HTML/CSS, static assets
+- **Infrastructure**: Ubuntu 24.04, Docker, Nginx, Prometheus, Grafana, Node Exporter
 
----
+## Contacts
 
-## 🌐 Live Demo
-
-Explore the live version of the portfolio:
-🔗 [https://doggotalent.xyz](https://doggotalent.xyz)
-
----
-
-## 📬 Contacts
-
-- **Email**: [martinuc.ilia@gmail.com](mailto:martinuc.ilia@gmail.com)
-- **GitHub**: [github.com/doggoTalent](https://github.com/doggoTalent)
-- **Telegram**: [@DoggoTalent](https://t.me/doggoTalent)
+- Email: martinuc.ilia@gmail.com
+- GitHub: [doggoTalent](https://github.com/doggoTalent)
+- Telegram: @DoggoTalent
