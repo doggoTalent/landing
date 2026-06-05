@@ -8,8 +8,8 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # DEBUGGING
-        name: Check secrets
+      # Debugging
+      - name: Check secrets
         run: |
           echo "VPS_IP is set: ${{ secrets.VPS_IP != '' }}"
           echo "VPS_USER is set: ${{ secrets.VPS_USER != '' }}"
