@@ -12,8 +12,8 @@ COMPOSE_FILE=$(realpath "$COMPOSE_FILE")
 
 set -e
 
-# Добавляем исключение для Git (чтобы избежать ошибки dubious ownership)
 git config --global --add safe.directory "$SOURCE_DIR"
+export GIT_SSH_COMMAND="ssh -i /home/andromeda/.ssh/id_ed25519 -o IdentitiesOnly=yes"
 
 echo -e "${YELLOW}Updating code from git...${NC}"
 git -C "$SOURCE_DIR" pull
