@@ -13,7 +13,7 @@ COMPOSE_FILE=$(realpath "$COMPOSE_FILE")
 set -e
 
 git config --global --add safe.directory "$SOURCE_DIR"
-export GIT_SSH_COMMAND="ssh -i /home/andromeda/.ssh/fithub_actions -o IdentitiesOnly=yes"
+export GIT_SSH_COMMAND="ssh -i /home/andromeda/.ssh/github_actions -o IdentitiesOnly=yes"
 
 echo -e "${YELLOW}Updating code from git...${NC}"
 git -C "$SOURCE_DIR" pull
