@@ -8,7 +8,6 @@ NC='\033[0m'
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 SOURCE_DIR="$SCRIPT_DIR"
 COMPOSE_FILE="$SCRIPT_DIR/../../docker-compose.yml"
-
 COMPOSE_FILE=$(realpath "$COMPOSE_FILE")
 
 git_has_updates() {
@@ -17,8 +16,13 @@ git_has_updates() {
 
     cd "$repo_path" || return 2
 
-    local remote_hash=$(git ls-remote origin -h "refs/heads/$branch" | awk '{print $1}')
+    git fetch origin
+
+    local remote_hash=$(git rev-parse "origin/$branch")
     local local_hash=$(git rev-parse HEAD)
+
+    echo "[DEBUG] Local hash:  $local_hash"
+    echo "[DEBUG] Remote hash: $remote_hash"
 
     if [ "$local_hash" != "$remote_hash" ]; then
         return 0   # updates available
@@ -27,8 +31,10 @@ git_has_updates() {
     fi
 }
 
-
 set -e
+
+echo "[DEBUG] SOURCE_DIR = $SOURCE_DIR"
+echo "[DEBUG] COMPOSE_FILE = $COMPOSE_FILE"
 
 if git_has_updates "$SOURCE_DIR"; then
     echo -e "${GREEN}There are new updates${NC}"
