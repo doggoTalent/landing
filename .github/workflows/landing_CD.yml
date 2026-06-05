@@ -17,5 +17,5 @@ jobs:
         run: |
           ssh -o StrictHostKeyChecking=no \
               -p ${{ secrets.VPS_PORT }} \
-              ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+              ${{ secrets.VPS_USER }}@${{ secrets.VPS_IP }} \
               "cd /home/andromeda/docker-data/projects/landing && bash update-landing.sh"
